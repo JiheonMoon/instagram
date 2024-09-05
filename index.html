@@ -5,18 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>instgram</title>
         <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     </head>
     <body>
-        <img src = "image/instagram.png" width="150px">
-        <input value = "검색">
-        <div id = "profile">
-            <img src = "image/cat.jpg" class="circle_pic">
-            <!-- <br>태그는 줄바꿈 기능이 있다.-->
-            <!-- <p>태그는 문단을 나누는 태그 paragraph의 약자이다.
-            p태그는 줄바꿈을 표현하는 block이라는 속성이 있기 때문에
-            옆에 글이 올 수 없다.-->
+        <div id = "top">
+            <div id="top_img">
+                <img src = "image/instagram.png" width="150px">
+            </div>
+                <input value = "🔍검색">
             <div>
-                <h2>half_bottle</h2>
+                <i class="fas fa-home"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+            </div>
+        </div>
+        <div id = "profile">
+            <div id = "profile_pic">
+                <img src = "image/cat.jpg" class="circle_pic">
+                <!-- <br>태그는 줄바꿈 기능이 있다.-->
+                <!-- <p>태그는 문단을 나누는 태그 paragraph의 약자이다.
+                p태그는 줄바꿈을 표현하는 block이라는 속성이 있기 때문에
+                옆에 글이 올 수 없다.-->
+            </div>
+            <div id = "profile_info">
+                <div id = "id">half_bottle <i class = "fas fa-cog"></i></div>
                 <button>프로필 편집</button>
                 <!--회색 버튼이 생긴다
                 css를 공부하면 버튼의 크기와 색상, 모양을 여러분의 취향대로 수정가능-->
@@ -35,7 +48,7 @@
                 needleworm.github.io</a>
             </p>
         </div>
-        <div><!--높이 35px로 하이라이트 이미지 2개 넣기-->
+        <div id ="highlight_area"><!--높이 35px로 하이라이트 이미지 2개 넣기-->
             <div class = "highlight">
                 <div class = "highlight_pic">
                     <img src = "image/hl1.jpg"  class="circle_pic">
@@ -53,6 +66,7 @@
                     😂
                 </div>
             </div>
+            <div></div>
         </div>
         <div class="stat_bar">
             <div class = "stat">
@@ -66,6 +80,23 @@
             <div class = "stat">
                 팔로우<br/>
                 189
+            </div>
+        </div>
+        <div id = "sub_icons">
+            <div class = "selected">
+                <i class = "fas fa-border-all"></i>
+            </div>
+            <div>
+                <i class = "fas fa-film"></i>
+            </div>
+            <div>
+                <i class = "far fa-play-circle"></i>
+            </div>
+            <div>
+                <i class = "far fa-bookmark"></i>
+            </div>
+            <div>
+                <i class = "fas fa-user-tag"></i>
             </div>
         </div>
         <div>
