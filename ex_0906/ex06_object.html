@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let person = {name : '홍길동', age:30};
+        document.write('person.name : ' , person.name,'<br>');
+        document.write('person.age : ' , person.age,'<br>');
+        document.write('<br>');
+        document.write("person['name'] : " , person['name'] ,'<br>');
+        document.write("person['age'] : " , person['age'] ,'<br>');
+        //프로퍼티 추가하기
+        //없는 프로퍼티를 사용하려고 하면 추가가 됨
+        person.bt = 'AB';
+        document.write('person.bt : ' , person.bt,'<br>');
+        document.write("person['bt'] : " , person['bt'] ,'<br>');
+        document.write('<br>');
+        //객체에서 프로퍼티 삭제
+        //delete 연산자 사용하면 object의 프로퍼티 삭제가능
+        //이때 피연산자는 프로퍼티의 key여야함
+        delete person.bt;
+        document.write("person['bt'] : " , person['bt'] ,'<br>');
+        document.write('<br>');
+        //프로퍼티 객체 확인
+        //in 연산자
+        document.write("name in person : " , 'name' in person ,'<br>');
+        document.write("address in person : " , 'address' in person ,'<br>');
+        document.write('<br>');
+
+        //for-in문을 사용하면 객체에 포함된 모든 프로퍼티에 대해 루프를 수행가능
+        //순서는 보장안됨
+        for(i in person){
+            document.write(`${i} = ${person[i]}<br>`);
+        }
+        document.write('<br>');
+        //새로운 객체에 기존 객체를 참조시킬수 있다
+        //주소값을 복사해오기 때문에 person의 속성값을 변경하면 같이바뀜
+        let person2 = person;
+
+        person.age = 40;
+
+        document.write('person2.age : ' , person2.age,'<br>');
+
+        //객체안에 객체가 들어갈수 있다
+
+        let circle = {
+            center : {x : 1.0, y : 2.0},
+            radius : 2.5
+        }
+        document.write(`circle.center.x : ${circle.center.x}, circle.center.y : ${circle.center.y} <br>`);
+        document.write('circle.radius : ',circle.radius+"<br>");
+		document.write("<hr>");
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
