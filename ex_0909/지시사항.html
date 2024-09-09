@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 120px;
+}
+#div1{
+    height: 80px;
+    padding-left: 30%;
+    padding-top: 2%;
+}
+img{
+
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+#div2{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 80px;
+    padding-top: 2%;
+    padding-right: 5%;
+}
+
+#idpw{
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+#idpw input{
+    height: 50%;
+}
+
+</style>
+<body>
+    <div id = "body" style="border: black solid 1px;">
+        <div id = "div1">
+            <img src="http://koreaisacademy.com/renewal2016/img/mainNew/it_logo_sp.png"/>
+        </div>
+        <div id = "div2">
+            <div id = "idpw">
+                <input type="text" placeholder="아이디"><br>
+                <input type="text" placeholder="비밀번호"><br>
+                <div id = "idcheck">
+                    <input type="checkbox">아이디 저장
+                </div>
+            </div>
+                <input type="button" value="로그인"/>
+        </div>
+        
+    </div>
+</body>
+</html>

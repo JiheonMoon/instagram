@@ -1,0 +1,172 @@
+JS
+자료형
+Number 정수 실수
+String 문자
+Boolean 논리형 false 0 '' null undefined Nan
+Undefined
+
+변수
+var -> 재선언 재할당이 가능
+let -> 재선언 불가 재할당 가능
+const -> 재선언과 재할당이 불가
+
+형변환
+Number()
+String()
+Boolean()
+
+연산자
+== 값만
+=== 값과 타입
+!=
+!==
+
+조건문
+if switch
+if(조건식){
+
+}
+조건식에 1 이상의 값이 들어오면 true로 취급
+0 '' null undefined Nan은 false
+
+배열의 선언
+let arr = new Array(크기)
+
+객체
+
+let student1 = {name : '홍길동', age : 30}
+
+없는 key에 값을 넣으면 프로퍼티 추가 student1.score = 80;
+
+delete를 이용해 프로퍼티 삭제 delete student1.score
+
+객체에 특정프로퍼티 확인 key in 객체
+
+객체 안에 객체가 들어갈수도 있음
+
+let circle = {
+   center : {x:1.0, y:2.0},
+   radius : 2.5
+}
+
+객체에는 함수가 들어갈수 있음
+let person = {
+  name : '홍길동'
+  getInfo: function(){
+   
+  }
+}
+함수는 독립적으로 호출하는것이 가능
+
+메서드는 개체를 통해서만 호출이 가능
+
+자바스크립트에서 객체의 규격을 json이라고 함
+JavaScript Object Notation
+
+다양한 곳에서 데이터를 주고받을때 json 규격을 활용함
+특히 인터넷에서 데이터를 주고받을때 모든 경우에 json이 활용됨
+
+json에 데이터로 넣을수 있는 타입
+Number String Boolean 
+Array : 대괄호와 쉼표
+Object : 객체안에 객체가능
+null : 텅빈값, 아무런 값도 없다는뜻
+
+생성자 함수
+fuction Person(name gender){
+	let married = true; private 취급
+	this.name = name;
+	this.gender = gender;
+}
+
+함수
+자주 사용하는 코드를 함수에 담아서 자주 사용하려는 문법
+function 함수명(인자){
+	처리 로직
+	return 반환
+}
+
+함수명(인자)
+
+JS로 할수있는것
+HTML요소를 만들거나 변경하거나 CSS를 변경하는것이 가능
+
+이벤트처리
+이벤트 HTML요소를 클릭, 글로 작성, 마우스를 올린다, 내리는 행위
+이벤트 처리 ->위 아ㅣ벤트들이 발생했을때 하고싶은거
+
+인라인 이벤트 모델
+
+<input type = "button" onclick= '기능'>
+
+표준 이벤트 모델
+<input type button>
+
+<script>
+let button = document.querySelector("input");
+
+button.addEventListener(이벤트 종류, 기능)
+-------------------------
+자주 쓰이는 이벤트들
+표준 모델 호출	인라인시 호출	발생시점
+keydown		onkeydown	키가 눌렸을때
+click		onclick		요소가 클릭됐을때
+doubleclick	ondoubleclick	요소가 더블클릭되었을때
+mouseover	onmouseover	요소위에 마우스포인터가 올라왔을때
+mouseleave	onmouseleave	요소로부터 마우스포인터가 벗어났을때
+change		onchange	요소의 값이 변경될때
+input		oninput		사용자가 요소에 값을 비력할때
+submit		onsubmit		form요소의 제출버튼이 클릭되었을때
+reset		onreset		form요소의 리셋버튼이 클릭되었을때
+
+
+웹페이지에 단축키 기능 추가 가능
+e.key 내가 누른 버튼 정보가 들어있다
+
+마우스의 이동을 감지하는 이벤트
+
+요소의 스타일 제어
+요소의 스타일을 제어하려면 요소 객체를 대상으로 점(.)을 찍고 style 을 입력한다
+그리고 다시 점(.)을 찍고 바꾸고 싶은 스타일을 작성한다
+요소.style.스타일속성 = "속성값"
+
+미디어 쿼리로 충분히 변경을 할수 있는 상황이면 굳이 JS를 사용하지 않는것이 좋다
+
+JS에서 스타일을 제어할때는 스타일 속성을 카멜 표기법으로 작성하는 것이 규칙
+두번째 단어부터 첫글자를 대문자로 바꾸는것
+
+요소의 속성 추출하기
+속성은 영어로 attribute
+js에서 속성을 열람할때 getAttribute() 함수 사용
+자바스크립트는 HTML를 제어하기 위한 도구이므로, 요소의 속성을
+열람하는 기능뿐만 아니라 조작하는 기능도 있다
+
+요소.setAttribute("속성","새로운 속성값");
+
+프로필편집
+
+프로필 사진 변경
+프롬포트 창으로 이미지의 경로를 받아와 이미지를 교체
+
+웹페이지 배포와 상용화
+웹 페이지를 인터넷에ㅔ 연결하여 누구나 접속해 볼수 있는 상태로 만드는 행위를 배포라고 한다
+
+웹페이지를 배포하는 절차
+1. 웹페이지를 컴퓨터에 저장을 한다
+2. 컴퓨터를 인터넷에 연결한다
+3. 컴퓨터의 설정을 변경해 누구나 컴퓨터에 접속할수 있도록 허락
+4. 외부인이 접속을 요청할때마다, 컴퓨터가 웹페이지를 보여줌
+
+이때 사용된 컴퓨터를 서버라고 부름
+사용자의 요청을 받아 서빙을 하는 도구라서 서버라고 부름
+
+웹 호스팅 서비스
+서버 용도로 사용되는 컴퓨터는 일반컴퓨터보다 비싸다
+개인서버를 구매해서 사용하는 것은 수지타산이 안맞음
+서버를 많이 구매하고 서버를 빌려주는 회사를 웹호스팅 회사라고 함
+웹 호스팅 업체에서는 초기비용을 조금만 투자하면 굉장히
+다양한 사람들에게 서버를 빌려주면서 돈을 벌수있음
+
+깃허브 페이지
+깃허브에서 무료로 웹페이지를 호스팅해주는 기능이 있음
+1.레포지토리를 public으로 만들어야함
